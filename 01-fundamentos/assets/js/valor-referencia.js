@@ -15,7 +15,7 @@ ana.nombre = 'Ana';
 
 console.log({ juan, ana });
 
-const cambiaNombre = ( persona ) => {
+const cambiaNombre = ( {...persona} ) => {
     persona.nombre = 'Tony';
     return persona;
 };
@@ -24,3 +24,22 @@ let peter = { nombre: 'Peter' };
 let tony = cambiaNombre( peter );
 
 console.log({ peter, tony });
+
+// Arreglos
+
+const frutas = ['Coco', 'Banano', 'Aguacate'];
+
+// const otrasFrutas = frutas;
+console.time('slice');
+const otrasFrutas1 = frutas.slice(); // Método slice (rompe la referencia) y crea un nuevo arreglo
+console.timeEnd('slice');
+
+console.time('spread');
+const otrasFrutas2 = [...frutas]; // Operador spread (rompe la referencia) y crea un nuevo arreglo
+console.timeEnd('spread');
+
+
+otrasFrutas1.push('Manzana');
+otrasFrutas2.push('Mango');
+
+console.table({ frutas, otrasFrutas1 , otrasFrutas2 });
