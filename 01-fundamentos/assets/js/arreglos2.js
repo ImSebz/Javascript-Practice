@@ -1,39 +1,42 @@
-let games = ['Super Mario Bros', 'Zelda', 'Metroid', 'Metal Gear Solid'];
-console.log('Largo:', games.length);
+let juegos = ['Zelda', 'Mario', 'Metroid', 'Chrono'];
+console.log('Largo:', juegos.length );
 
-let first = games[0];
-let last = games[games.length - 1];
-// console.log('Primero:', first);
-// console.log('Último:', last);
-console.log({ first, last });
+let primero = juegos[ 2 - 2 ];
+let ultimo  = juegos[ juegos.length - 1 ];
 
-games.forEach((element, index, arr) => {
-    console.log({ element, index, arr });
+console.log({ primero, ultimo });
+
+juegos.forEach( (elemento, indice, arr) => {
+    console.log({ elemento, indice, arr });
 });
 
-let newLenght = games.push('Fortnite'); //push sirve para agregar un elemento al final del arreglo
+let nuevaLongitud = juegos.push( 'F-Zero' );
+console.log({ nuevaLongitud, juegos });
 
-console.log({ newLenght, games });
+nuevaLongitud = juegos.unshift('Fire Emblem');
+console.log({ nuevaLongitud, juegos });
 
-newLenght = games.unshift('Binding of Isaac'); //unshift sirve para agregar un elemento al inicio del arreglo
-
-console.log({ newLenght, games });
-
-let deletedGame = games.pop(); //pop sirve para eliminar el ultimo elemento del arreglo
-console.log({ deletedGame, games });
-
-let position = 1;
-console.log(games);
-let deletedGames = games.splice(position, 2); //splice sirve para eliminar elementos del arreglo
-console.log({ deletedGames, games });
+let juegoBorrado = juegos.pop();
+console.log({ juegoBorrado, juegos });
 
 
-let ZeldaIndex = games.indexOf('Binding of Isaac'); //indexOf sirve para encontrar el indice de un elemento del arreglo
-console.log({ ZeldaIndex, games });
+let pos = 1;
 
-// games.shift(); //shift sirve para eliminar el primer elemento del arreglo
+console.log( juegos );
+let juegosBorrados = juegos.splice( pos, 2);
+console.log({ juegosBorrados, juegos });
 
-// console.log(games);
+
+let metroidIndex = juegos.indexOf('Metroid'); // CaSeSeNsItIvE
+console.log({ metroidIndex });
 
 
-//TODO: Referencia, Valor
+//TODO: Referencia
+
+
+
+
+
+
+
+

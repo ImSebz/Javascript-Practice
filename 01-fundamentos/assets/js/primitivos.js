@@ -1,33 +1,42 @@
-let nombre = 'Sebastian Camargo';
-console.log(nombre);
 
-nombre = 'Spider Man'; 
-console.log(nombre);
+let nombre = 'Peter Parker';
+console.log( nombre );
 
-nombre = "Tia May";
-nombre = `Tia May ${nombre}`;
+nombre = 'Ben Parker';
+console.log( nombre );
 
-console.log(typeof nombre);
+nombre = "Tía May";
+nombre = `Tía May`;
+
+console.log( typeof nombre );
 
 nombre = 123;
-console.log(typeof nombre); 
+console.log( typeof nombre );
 
-let isMarvel = false;
-console.log(typeof isMarvel);
 
-let age = 25;
-console.log(typeof age);
+let esMarvel = false;
+console.log( typeof esMarvel );
 
-age = 25.001;
-console.log(typeof age);
 
-let superPower;
-console.log(typeof superPower);
+let edad = 33;
+console.log( typeof edad );
 
-let imNull = null;  // object	
-console.log(typeof imNull);
+edad = 33.001;
+console.log( typeof edad );
+
+
+let superPoder;
+console.log( typeof superPoder ); // ???
+
+let soyNull = null;
+console.log( typeof soyNull ); // ???
+
 
 let symbol1 = Symbol('a');
 let symbol2 = Symbol('a');
-console.log(typeof symbol1);
-console.log(symbol1 === symbol2);
+
+console.log( typeof symbol1 );
+
+
+console.log( symbol1 === symbol2 );
+

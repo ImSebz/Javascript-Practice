@@ -1,25 +1,28 @@
+
+
 // const arr = new Array(10);
+// const arr = [];
 // console.log(arr);
 
-// const arr = [  1, 2, 3, 4 ];
-// console.log(arr);
+let videoJuegos = [ 'Mario 3', 'Megaman', 'Chrono Trigger' ];
+console.log({ videoJuegos });
 
-let videoGames = ['Super Mario World', 'Megaman', 'Isaac'];
-console.log({ videoGames });
+console.log( videoJuegos[0] );
 
-console.log(videoGames[0]);
-
-let thingsArray = [
+let arregloCosas = [
     true,
     123,
-    'Sebastian',
+    'Fernando',
     1 + 2,
-    function () { },
-    () => { },
+    function(){},
+    ()=>{},
     { a: 1 },
-    ['Bowser', 'Peach', 'Browser Jr',
-        ['Mario', 'Luigi', 'Yoshi']]
+    ['X', 'Megaman', 'Zero', 'Dr. Light', [
+        'Dr. Willy',
+        'Woodman'
+    ]]
 ];
-// console.log(thingsArray);
-// console.log({ thingsArray });
-console.log(thingsArray[7][3][1]);
+
+// console.log({ arregloCosas });
+// console.log( arregloCosas[2] );
+console.log( arregloCosas[7][4][1] );
