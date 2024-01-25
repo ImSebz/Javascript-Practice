@@ -38,7 +38,6 @@ console.time('spread');
 const otrasFrutas2 = [...frutas]; // Operador spread (rompe la referencia) y crea un nuevo arreglo
 console.timeEnd('spread');
 
-
 otrasFrutas1.push('Manzana');
 otrasFrutas2.push('Mango');
 
