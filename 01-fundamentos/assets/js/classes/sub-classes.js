@@ -42,30 +42,21 @@ class Persona {
     }
 }
 
-const sebastian = new Persona('Sebastian', 25, 1);
-const andres = new Persona('Andres', 28, 2);
-const lina = new Persona('Lina', 30, 3);
+
+class Empleado extends Persona{
+    area = 'Software development';
+
+    constructor(name, age, code) {
+        super(name, age, code); // Llamar al constructor de la clase padre
+    }
+
+}
+
+const sebastian = new Empleado('Sebastian', 25, 10);
 
 
-// console.log(sebastian);
-// console.log(andres);
-
+// const sebastian = new Empleado();
+console.log(sebastian);
+sebastian.whoIAm();
 sebastian.myCode();
 
-sebastian.setCel = 'col.1234567890';
-// sebastian.comida = 'Calle 123';
-
-
-// console.log(sebastian.getCel);
-
-// console.log(sebastian);
-
-// Persona._conteo = 2;
-console.log('Conteo estático', Persona._conteo);
-console.log(Persona.conteo)
-Persona.mensaje();
-
-Persona.propiedadExterna = 'Hola Mundo';
-
-console.log(Persona.propiedadExterna);
-console.log(Persona);
