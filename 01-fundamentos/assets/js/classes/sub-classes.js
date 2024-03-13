@@ -44,10 +44,17 @@ class Persona {
 
 
 class Empleado extends Persona{
-    area = 'Software development';
+    area = 'No area';
 
     constructor(name, age, code) {
+
         super(name, age, code); // Llamar al constructor de la clase padre
+        this.area = 'Software development'; // Se debe llamar el super antes de inicializar las propiedades
+    }
+
+    whoIAm() {
+        console.log(`Soy ${this.name}, tengo ${this.age} años y trabajo en ${this.area}`);
+        super.whoIAm();
     }
 
 }
@@ -58,5 +65,5 @@ const sebastian = new Empleado('Sebastian', 25, 10);
 // const sebastian = new Empleado();
 console.log(sebastian);
 sebastian.whoIAm();
-sebastian.myCode();
+// sebastian.myCode();
 
