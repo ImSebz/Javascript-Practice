@@ -25,6 +25,12 @@ const loadStore = () => {
     throw new Error('No implementado');
 }
 
+
+const getTodos = ( filter = Filters.All ) => {
+    
+    
+}
+
 /**
  * 
  * @param {String} description 
