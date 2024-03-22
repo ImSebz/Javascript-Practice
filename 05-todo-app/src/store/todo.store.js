@@ -28,7 +28,16 @@ const loadStore = () => {
 
 const getTodos = ( filter = Filters.All ) => {
     
-    
+    switch (filter) {
+        case Filters.All:
+            return [...state.todos];
+        case Filters.Completed:
+            return state.todos.filter( todo => todo.done );
+        case Filters.Pending:
+            return state.todos.filter( todo => !todo.done );
+        default:
+            throw new Error(`Opción ${ filter } no es válida.`);
+    }
 }
 
 /**
@@ -36,7 +45,11 @@ const getTodos = ( filter = Filters.All ) => {
  * @param {String} description 
  */
 const addTodo = (description) => {
-    throw new Error('No implementado');
+    if (!description) throw new Error('La descripción es obligatoria');
+
+    state.todos.push(new Todo (description));
+
+
 }
 
 /**
@@ -53,26 +66,32 @@ const toggleTodo = (todoId) => {
  * @param {String} todoId 
  */
 const deleteTodo = (todoId) => {
-    throw new Error('No implementado');
+    state.todos = state.todos.filter( todo => todo.id !== todoId);
 }
 
 const deleteCompletedTodo = () => {
-    throw new Error('No implementado');
+    state.todos = state.todos.filter( todo => todo.done);
 }
 
+/**
+ * 
+ * @param {Filters} newFilter 
+ */
 const setFilter = (newFilter = Filters.All) => {
-    throw new Error('No implementado');
+    state.filter = newFilter;
 }
 
 const getCurrentFilter = () => {
-    throw new Error('No implementado');
+    return state.filter;
 }
 
 
 export default {
+    addTodo,
     deleteCompletedTodo,
     deleteTodo,
     getCurrentFilter,
+    getTodos,
     initStore,
     loadStore,
     setFilter,
