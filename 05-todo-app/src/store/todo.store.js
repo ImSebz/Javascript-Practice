@@ -11,7 +11,9 @@ const state = {
     todos: [
         new Todo('Terminar JavaScript Moderno'),
         new Todo('Terminar SQL de cero'),
-        new Todo('Terminar TypeScript')
+        new Todo('Terminar TypeScript'),
+        new Todo('Terminar React cero a experto'),
+        new Todo('Terminar NodeJS'),
     ],
     filter: Filters.All,
 };
@@ -57,9 +59,15 @@ const addTodo = (description) => {
  * @param {String} todoId 
  */
 const toggleTodo = (todoId) => {
-    throw new Error('No implementado');
-}
+    
+    state.todos = state.todos.map( todo => {
+        if (todo.id === todoId) {
+            todo.done = !todo.done;
+        }
+        return todo;
+    });
 
+}
 
 /**
  * 
