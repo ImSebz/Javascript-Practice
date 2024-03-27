@@ -1,19 +1,19 @@
 import { Todo } from "../todos/models/todos.model"
 
 
-const Filters = {
+export const Filters = {
     All: 'all',
     Completed: 'Completed',
-    Pending: 'Pending'
+    Pending: 'Pending',
 };
 
 const state = {
     todos: [
-        new Todo('Terminar JavaScript Moderno'),
-        new Todo('Terminar SQL de cero'),
-        new Todo('Terminar TypeScript'),
-        new Todo('Terminar React cero a experto'),
-        new Todo('Terminar NodeJS'),
+        // new Todo('Terminar JavaScript Moderno'),
+        // new Todo('Terminar SQL de cero'),
+        // new Todo('Terminar TypeScript'),
+        // new Todo('Terminar React cero a experto'),
+        // new Todo('Terminar NodeJS'),
     ],
     filter: Filters.All,
 };
@@ -90,7 +90,7 @@ const deleteTodo = (todoId) => {
 }
 
 const deleteCompletedTodo = () => {
-    state.todos = state.todos.filter(todo => todo.done);
+    state.todos = state.todos.filter(todo => !todo.done);
     saveStateToLocalStorage();
 }
 
