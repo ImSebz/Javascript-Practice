@@ -8,9 +8,8 @@ let element;
 export const renderPending = (elementId) => {
     if (!element)
         element = document.querySelector(elementId);
-
-    if (!element) 
+    if (!element)
         throw new Error(`Elemento con id ${elementId} no encontrado`);
+    element.innerHTML = todoStore.getTodos(Filters.Pending).length;
 
-    element.innetHTML = todoStore.getTodos( Filters.Pending ).length;
 };
