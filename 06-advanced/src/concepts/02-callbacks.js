@@ -28,7 +28,7 @@ export const callbacksComponent = (element) => {
 
             element.innerHTML = `${hero1.name} vs ${hero2.name}`;
 
-
+            // Callback hell
             findHero(id3, (error, hero3) => {
                 if (error) {
                     console.error(error);
