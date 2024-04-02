@@ -6,7 +6,13 @@ import { heroes } from "../data/heroes";
  */
 export const promiseComponent = (element) => {
 
-    console.log('promiseComponent');
+    const renderHero = ( hero ) => {
+        element.innerHTML = hero.name;
+    };
+
+    const id1 = '5d86371fd55e2e2a30fe1ccb2';
+
+    findHero(id1);
 
 };
 
@@ -18,6 +24,7 @@ export const promiseComponent = (element) => {
 const findHero = ( id ) => {
 
     return new Promise( ( resolve, reject ) => {
+        console.log('Searching hero...');
         
         const hero = heroes.find( hero => hero.id === id );  
         
