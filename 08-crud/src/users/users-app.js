@@ -13,13 +13,13 @@ export const UsersApp = async (element) => {
     element.innerHTML = 'Loading...';
     await usersStore.loadNextPage();
     element.innerHTML = '';
-    // console.log(usersStore.getUsers());
 
     renderTable(element);
     renderButtons(element);
     renderAddButton(element);
     renderModal(element, async(userLike) => {
         const user = await saveUser(userLike);
+        console.log({ user });
         usersStore.onUserChanged(user);
         renderTable();
     });
