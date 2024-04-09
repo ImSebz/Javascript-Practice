@@ -12,7 +12,7 @@ export const UsersApp = async (element) => {
     element.innerHTML = 'Loading...';
     await usersStore.loadNextPage();
     element.innerHTML = '';
-    console.log(usersStore.getUsers());
+    // console.log(usersStore.getUsers());
 
     renderTable(element);
     renderButtons(element);
